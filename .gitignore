@@ -1,0 +1,11 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
+[Pp]ackages/
+[Uu]serSettings/
+
+# Visual Studio/Mono Auto-generated files
+.vscode/
+*.sln
+*.userprefs
