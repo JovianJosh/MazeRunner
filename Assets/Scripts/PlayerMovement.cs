@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    public float moveSpeed = 5f;
 
-    // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        // Get input for horizontal and vertical movement (WASD or arrow keys)
+        float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-        transform.Translate(movement * speed * Time.deltaTime);
+        // Create movement vector
+        Vector2 movement = new Vector2(moveX, moveY);
+
+        // Apply movement to the player object
+        transform.Translate(movement * moveSpeed * Time.deltaTime);
     }
 }
